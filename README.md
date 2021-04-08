@@ -1,7 +1,7 @@
 1. cnpm install
 2. cnpm run dev
 3. visit localhost:8080
-4. Result show
+4. result show
 
 ![首页配色方案列表展示](http://youpai.yuhann.cn/20210407210628.png)
 
