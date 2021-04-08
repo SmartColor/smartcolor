@@ -1,14 +1,10 @@
-# ai-traffic-management-system-frontend
+# GAN-Color
 
-> A Vue.js project
 
-> 实训项目
 
 ## Build Setup
 
 ``` bash
-# 淘宝 NPM 镜像
-
 # 这是一个完整 npmjs.org 镜像，你可以用此代替官方版本
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 
