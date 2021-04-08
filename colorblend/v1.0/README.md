@@ -1,5 +1,5 @@
 # GAN-Color
-
+> 使用GAN来生成配色
 ## Build Setup
 
 ``` bash
