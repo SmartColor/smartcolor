@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style type="text/css">
+  #demo {
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: url("../static/image/tip.gif") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    /*line-height: 100px;*/
+    display: table;
+  }
+  .wrap span{
+    color: red;
+  }
+  .wrap{
+    display: table-cell;
+    vertical-align: middle;
+
+  }
+</style>
+
+<script type="text/javascript">
+  window.onload = function(){
+    var demo = document.getElementById('demo');
+    var sx = sy = 10;
+    var x = y = 0;
+
+    function move(){
+      if(document.documentElement.clientWidth - demo.offsetWidth-10 < x || x < 0){
+        sx = -sx;
+      }
+
+      if(document.documentElement.clientHeight - demo.offsetHeight-10 < y || y < 0){
+        sy = -sy;
+      }
+
+      x = demo.offsetLeft + sx;
+      y = demo.offsetTop + sy;
+
+      demo.style.left = x + 'px';
+      demo.style.top = y + 'px';
+    }
+
+    var timer = setInterval(move, 100);
+
+    demo.onmouseover = function(){
+      clearInterval(timer);
+      demo.style.display="none"
+    }
+
+    demo.onmouseout = function(){
+      timer = setInterval(move, 100);
+    }
+  }
+</script>
+<div id="demo">
+  <div class="wrap">
+    还有<span>100</span>记录未审核哦
+  </div>
+</div>
+<!--<img src="../static/image/tip.gif" id="demo" />-->
+
+</body>
+</html>
