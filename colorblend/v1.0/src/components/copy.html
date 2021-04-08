@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style type="text/css">
+  .wrapper {position: relative;}
+  #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+</style>
+
+<body>
+<div class="wrapper">
+  <p id="text" color="我把你当兄弟你却想着复制我"></p>
+  <textarea id="input">这是幕后黑手</textarea>
+  <button onclick="copyText()">copy</button>
+</div>
+</body>
+<script type="text/javascript">
+    function copyText() {
+      // var text = document.getElementById("text").innerText;
+      var text = document.getElementById("text").attributes["color"].nodeValue;
+      var input = document.getElementById("input");
+      input.value = text; // 修改文本框的内容
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("复制成功");
+    }
+</script>
+
+</html>
