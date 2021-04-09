@@ -1,8 +1,14 @@
+# SmartColor
+
+This repository contains our website and method proposed in the paper "SmartColor: Automatic Web Color Scheme Generation Based on Deep Learning", ICICS 2021.
+
+## How to use
 1. cnpm install
 2. cnpm run dev
 3. visit localhost:8080
 4. result show
 
+## Visualization
 ![首页配色方案列表展示](http://youpai.yuhann.cn/20210407210628.png)
 
 ![首页色块点击放大图](http://youpai.yuhann.cn/20210408105308.png)
